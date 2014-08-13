@@ -1,0 +1,182 @@
+@color-white: #fff;
+@color-primary: #00b998;
+@color-dark: #323a47;
+@color-muted: #a1a1a1;
+body {
+  font-family: "Helvetica Neue", "微软雅黑", Helvetica, Arial, sans-serif;
+  color: @color-dark;
+}
+
+/*visual*/
+.block {
+  display: block;
+}
+
+/*position*/
+.p-t(@px:15px) {
+  padding-top: @px;
+}
+
+.p-t-xs {
+  .p-t(5px)
+}
+
+.p-t-s {
+  .p-t(10px)
+}
+
+.p-t-lg {
+  .p-t(20px)
+}
+
+.p-t-x-lg {
+  .p-t(25px)
+}
+
+.m-t(@px:15px) {
+  margin-top: @px;
+
+}
+
+.m-t {
+  .m-t;
+}
+
+.m-t-xs {
+  .m-t(5px)
+}
+
+.m-t-s {
+  .m-t(10px)
+}
+
+.m-t-lg {
+  .m-t(20px)
+}
+
+.m-t-x-lg {
+  .m-t(25px)
+}
+
+.li-nonestyle {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  .li-nonestyle
+}
+
+.text-primary {
+  color: #00b998;
+}
+
+.text-dark {
+  color: @color-dark;
+}
+
+.text-white {
+  color: #fff;
+}
+
+.header, .footer {
+  text-align: center;
+  width: 960px;
+  margin: 0 auto;
+}
+
+.header {
+  .p-t-lg;
+  background-color: @color-white;
+  .brand-logo {
+    background-color: grey;
+    width: 100px;
+    height: 50px;
+    float: left;
+  }
+  .nav {
+    .m-t;
+    display: inline-block;
+
+    li {
+      float: left;
+    }
+    a {
+      .text-dark;
+      margin: 30px;
+      font-size: 18px;
+      padding: 12px 0;
+      &:hover,&.active {
+        .text-primary;
+        border-bottom: 2px solid @color-primary;
+        text-decoration: none;
+      }
+    }
+  }
+  .tools {
+    float: right;
+    .m-t;
+    li {
+      float: left;
+    }
+    a {
+      .text-primary;
+      height: 26px;
+      line-height: 26px;
+      border-radius: 2px;
+      padding: 4px 8px;
+      &:hover {
+        .text-white;
+        background-color: @color-primary;
+        text-decoration: none;
+      }
+    }
+  }
+}
+.main {
+  min-height: 200px;
+}
+.footer {
+  div {
+    display: inline-block;
+    ul {
+      overflow: hidden;
+    }
+    li {
+      float: left;
+      a {
+        margin: 0 12px;
+        border: 1px solid @color-dark;
+        width: 100px;
+        height: 100px;
+        line-height: 120px;
+        border-radius: 50%;
+        //    box-shadow: inset 0 0 0 3px rgba(255, 255, 255, 0.6), 0 0 0 1px rgba(0, 0, 0, 1);
+        box-sizing: border-box;
+        float: left;
+        content: '';
+        color: @color-dark;
+        i {
+          font-size: 40px;
+        }
+        &:hover {
+          border: 1px solid @color-primary;
+          background-color: @color-primary;
+          color: @color-white;
+        }
+      }
+    }
+  }
+  .pull-left, .pull-right {
+    margin-top: 30px;
+    font-size: 22px;
+    display: inline;
+  }
+  .copyright {
+    .m-t-s;
+    .block;
+    color: @color-muted;
+  }
+
+}

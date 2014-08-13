@@ -1,0 +1,152 @@
+body {
+  font-family: "Helvetica Neue", "微软雅黑", Helvetica, Arial, sans-serif;
+  color: #323a47;
+}
+/*visual*/
+.block {
+  display: block;
+}
+/*position*/
+.p-t-xs {
+  padding-top: 5px;
+}
+.p-t-s {
+  padding-top: 10px;
+}
+.p-t-lg {
+  padding-top: 20px;
+}
+.p-t-x-lg {
+  padding-top: 25px;
+}
+.m-t {
+  margin-top: 15px;
+}
+.m-t-xs {
+  margin-top: 5px;
+}
+.m-t-s {
+  margin-top: 10px;
+}
+.m-t-lg {
+  margin-top: 20px;
+}
+.m-t-x-lg {
+  margin-top: 25px;
+}
+.li-nonestyle {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.text-primary {
+  color: #00b998;
+}
+.text-dark {
+  color: #323a47;
+}
+.text-white {
+  color: #fff;
+}
+.header,
+.footer {
+  text-align: center;
+  width: 960px;
+  margin: 0 auto;
+}
+.header {
+  padding-top: 20px;
+  background-color: #ffffff;
+}
+.header .brand-logo {
+  background-color: grey;
+  width: 100px;
+  height: 50px;
+  float: left;
+}
+.header .nav {
+  margin-top: 15px;
+  display: inline-block;
+}
+.header .nav li {
+  float: left;
+}
+.header .nav a {
+  color: #323a47;
+  margin: 30px;
+  font-size: 18px;
+  padding: 12px 0;
+}
+.header .nav a:hover,
+.header .nav a.active {
+  color: #00b998;
+  border-bottom: 2px solid #00b998;
+  text-decoration: none;
+}
+.header .tools {
+  float: right;
+  margin-top: 15px;
+}
+.header .tools li {
+  float: left;
+}
+.header .tools a {
+  color: #00b998;
+  height: 26px;
+  line-height: 26px;
+  border-radius: 2px;
+  padding: 4px 8px;
+}
+.header .tools a:hover {
+  color: #fff;
+  background-color: #00b998;
+  text-decoration: none;
+}
+.main {
+  min-height: 200px;
+}
+.footer div {
+  display: inline-block;
+}
+.footer div ul {
+  overflow: hidden;
+}
+.footer div li {
+  float: left;
+}
+.footer div li a {
+  margin: 0 12px;
+  border: 1px solid #323a47;
+  width: 100px;
+  height: 100px;
+  line-height: 120px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  float: left;
+  content: '';
+  color: #323a47;
+}
+.footer div li a i {
+  font-size: 40px;
+}
+.footer div li a:hover {
+  border: 1px solid #00b998;
+  background-color: #00b998;
+  color: #ffffff;
+}
+.footer .pull-left,
+.footer .pull-right {
+  margin-top: 30px;
+  font-size: 22px;
+  display: inline;
+}
+.footer .copyright {
+  margin-top: 10px;
+  display: block;
+  color: #a1a1a1;
+}
