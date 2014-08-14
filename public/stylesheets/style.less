@@ -5,7 +5,7 @@
 
 @bg-dark: #323a47;
 @bg-muted: #f4f4f4;
-html{
+html {
   overflow-x: hidden;
 }
 
@@ -15,7 +15,7 @@ body {
 }
 
 /*clear*/
-.after-clear{
+.after-clear {
   content: ".";
   clear: both;
   display: block;
@@ -29,7 +29,8 @@ body {
 .bg-muted {
   background-color: @bg-muted;
 }
-.bg-dark{
+
+.bg-dark {
   background-color: @bg-dark;
 }
 
@@ -257,6 +258,7 @@ ul {
 .header {
   .p-t-lg;
   background-color: @color-white;
+  position: relative;
   .brand-logo {
     background-color: grey;
     width: 100px;
@@ -282,13 +284,12 @@ ul {
     }
   }
   .tools {
-    float: right;
-    width: 150px;
+    right: 0;
+    top: 35px;
+    position: absolute;
     ul {
       float: right;
     }
-
-    .m-t;
     li {
       float: left;
     }
@@ -309,6 +310,9 @@ ul {
 
 .main {
   min-height: 200px;
+  &:after{
+    .after-clear
+  }
 }
 
 .footer {
@@ -406,7 +410,7 @@ ul {
   }
   .product-info {
     ul li {
-
+      box-shadow: 0 4px 2px #aaaaaa;
       width: 300px;
       .img {
         width: 100%;
@@ -415,7 +419,7 @@ ul {
       .des {
         background-color: @color-white;
         padding: 16px 16px;
-        h3{
+        h3 {
           text-align: left;
           margin-top: 0;
         }
@@ -428,65 +432,64 @@ ul {
     }
   }
 }
-#updatelog{
+
+#updatelog {
   @temp-blue: #92afd0;
-  &:after,&:before{
+  &:after, &:before {
     .bg-dark
   }
-  h1{
-    color:@color-white;
+  h1 {
+    color: @color-white;
   }
-  .summary{
+  .summary {
     color: @temp-blue;
   }
-  .log-info{
-    #timeline,.des{
+  .log-info {
+    #timeline, .des {
       width: 84%;
       margin: 0 auto;
     }
-    .timeline-date{
-      span{
+    .timeline-date {
+      span {
         display: block;
         width: 16.666666%;
-        color:  @temp-blue;
+        color: @temp-blue;
         float: left;
         margin-top: 15px;
-        &.active{
-          color:lighten(@color-primary, 15%);
+        &.active {
+          color: lighten(@color-primary, 15%);
         }
       }
-      &:after{
+      &:after {
         .after-clear
       }
     }
-    .des{
-      .img{
+    .des {
+      .img {
         width: 200px;
         height: 200px;
         background-color: #03ae90;
         margin-right: 20px;
         float: left;
       }
-      .article{
+      .article {
         text-align: left;
         color: @color-white;
-        h2{
+        h2 {
           margin-bottom: 30px;
         }
-        p{
-          font-size:16px;
+        p {
+          font-size: 16px;
           letter-spacing: 1px;
 
         }
       }
-      &:after{
+      &:after {
         .after-clear
       }
     }
   }
 }
-
-
 
 @c-l1: #e68275;
 @c-l2: #efaf4c;

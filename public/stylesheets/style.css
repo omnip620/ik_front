@@ -167,6 +167,7 @@ ul {
 .header {
   padding-top: 20px;
   background-color: #ffffff;
+  position: relative;
 }
 .header .brand-logo {
   background-color: grey;
@@ -194,9 +195,9 @@ ul {
   text-decoration: none;
 }
 .header .tools {
-  float: right;
-  width: 150px;
-  margin-top: 15px;
+  right: 0;
+  top: 35px;
+  position: absolute;
 }
 .header .tools ul {
   float: right;
@@ -218,6 +219,11 @@ ul {
 }
 .main {
   min-height: 200px;
+}
+.main:after {
+  content: ".";
+  clear: both;
+  display: block;
 }
 .footer {
   position: relative;
@@ -309,6 +315,7 @@ ul {
   float: left;
 }
 .index-lg-block .product-info ul li {
+  box-shadow: 0 4px 2px #aaaaaa;
   width: 300px;
 }
 .index-lg-block .product-info ul li .img {
