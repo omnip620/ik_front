@@ -4,7 +4,7 @@
 @color-muted: #6c6c6c;
 
 @bg-dark: #323a47;
-@bg-muted: #f4f4f4;
+@bg-muted: #f9f9f9;
 html {
   overflow-x: hidden;
 }
@@ -16,7 +16,7 @@ body {
 
 /*clear*/
 .after-clear {
-  content: ".";
+  content: "";
   clear: both;
   display: block;
 }
@@ -32,6 +32,14 @@ body {
 
 .bg-dark {
   background-color: @bg-dark;
+}
+
+.transition(@property:all,@duration:150ms,@timing-function:ease,@delay:0ms) {
+  -webkit-transition: @property @duration @timing-function @delay;
+  -moz-transition: @property @duration @timing-function @delay;
+  -ms-transition: @property @duration @timing-function @delay;
+  -o-transition: @property @duration @timing-function @delay;
+  transition: @property @duration @timing-function @delay;
 }
 
 /*position*/
@@ -154,7 +162,6 @@ body {
 
 .m-l(@px:15px) {
   margin-left: @px;
-
 }
 
 .m-l {
@@ -233,6 +240,34 @@ body {
   margin: 0;
 }
 
+/*tap*/
+.tparrows i {
+  font-size: 70px;
+  color: darken(@color-white, 15%);
+  &:hover {
+    color: @color-white;
+  }
+}
+a.tp-reg-btn{
+  border: 1px solid @color-white;
+  padding: 8px 12px;
+  color: @color-white;
+  background-color: transparent;
+  border-radius: 2px;
+  &:hover {
+    color: @color-primary;
+    border-color: @color-primary;
+  }
+}
+
+.simplebullets .bullet i {
+  font-size: 10px;
+  color: darken(@color-white, 15%);
+  &:hover {
+    color: @color-white;
+  }
+}
+
 ul {
   .li-nonestyle
 }
@@ -260,10 +295,10 @@ ul {
   background-color: @color-white;
   position: relative;
   .brand-logo {
-    background-color: grey;
-    width: 100px;
-    height: 50px;
+    width: 118px;
+    height: 56px;
     float: left;
+    .m-b
   }
   .nav {
     display: inline-block;
@@ -310,7 +345,8 @@ ul {
 
 .main {
   min-height: 200px;
-  &:after{
+  margin-bottom: 60px;
+  &:after {
     .after-clear
   }
 }
@@ -362,13 +398,16 @@ ul {
     right: 0;
   }
   .copyright {
-    .m-t-s;
+    .m-t;
+    .m-b-x-lg;
     .block;
     color: @color-muted;
   }
 }
 
 /*index page*/
+
+@temp-blue: #92afd0;
 .index-lg-block {
   width: 960px;
   margin: 0 auto;
@@ -376,6 +415,20 @@ ul {
   text-align: center;
   padding-top: 60px;
   padding-bottom: 100px;
+  &.bg-dark {
+    h1 {
+      color: @color-white;
+    }
+    .summary {
+      color: @temp-blue;
+
+    }
+    &:after, &:before {
+      .bg-dark;
+    }
+
+  }
+
   &::before, &::after {
     content: "";
     position: absolute;
@@ -412,9 +465,9 @@ ul {
     ul li {
       box-shadow: 0 4px 2px #aaaaaa;
       width: 300px;
-      .img {
+      img {
         width: 100%;
-        height: 180px;
+
       }
       .des {
         background-color: @color-white;
@@ -434,16 +487,7 @@ ul {
 }
 
 #updatelog {
-  @temp-blue: #92afd0;
-  &:after, &:before {
-    .bg-dark
-  }
-  h1 {
-    color: @color-white;
-  }
-  .summary {
-    color: @temp-blue;
-  }
+
   .log-info {
     #timeline, .des {
       width: 84%;
@@ -465,10 +509,9 @@ ul {
       }
     }
     .des {
-      .img {
+      img {
         width: 200px;
         height: 200px;
-        background-color: #03ae90;
         margin-right: 20px;
         float: left;
       }
@@ -491,17 +534,95 @@ ul {
   }
 }
 
-@c-l1: #e68275;
-@c-l2: #efaf4c;
-@c-l3: #5f66a0;
-.c-l1 {
-  background-color: @c-l1;
+#service .service-info {
+  li {
+    width: 25%;
+    padding: 0 16px;
+    .top {
+      .icon {
+        height: 200px;
+        width: 200px;
+        line-height: 250px;
+        border-radius: 50%;
+        border: 1px solid lighten(@color-muted, 45%);
+        color: @color-primary;
+        .transition(all, 100ms, ease-out, 0s);
+        i {
+          font-size: 70px;
+        }
+      }
+      h3 {
+        color: @color-muted;
+      }
+    }
+    .des {
+      color: @color-muted;
+      font-size: 13px;
+      text-align: left;
+      letter-spacing: 1px;
+    }
+    &:hover {
+      .top {
+        .icon {
+          background-color: @color-primary;
+          color: @color-white;
+        }
+        h3 {
+          color: @color-primary;
+        }
+
+      }
+      .des {
+        color: @color-dark;
+      }
+    }
+  }
+  &:after {
+    .after-clear
+  }
 }
 
-.c-l2 {
-  background-color: @c-l2;
+#contact {
+  &:after, &:before {
+    .bg-dark;
+  }
+  color: @color-white;
+  .summary {
+    color: @temp-blue;
+  }
+  .contact-info {
+    li {
+      width: 33.33333333%;
+      padding: 0 16px;
+
+      .top {
+
+        .icon {
+          height: 200px;
+          width: 200px;
+          line-height: 200px;
+          border-radius: 50%;
+          background-color: #4e637d;
+          margin: 0 auto;
+          .transition(all, 100ms, ease-out, 0s);
+          i {
+            font-size: 100px;
+          }
+        }
+      }
+      .des {
+        letter-spacing: 1px;
+        font-size: 16px;
+      }
+      &:hover {
+        .des {
+          color: @color-primary;
+        }
+      }
+    }
+    &:after {
+      .after-clear
+    }
+  }
 }
 
-.c-l3 {
-  background-color: @c-l3;
-}
