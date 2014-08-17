@@ -472,6 +472,7 @@ ul {
       .des {
         background-color: @color-white;
         padding: 16px 16px;
+        height: 150px;
         h3 {
           text-align: left;
           margin-top: 0;
@@ -621,6 +622,32 @@ ul {
       }
     }
     &:after {
+      .after-clear
+    }
+  }
+}
+
+#fans{
+  padding: 0;
+  .circle{
+//    box-shadow: 0px 0px 80px #565e68 inset,0px 0px 5px rgba(200,200,200,0.5);
+    border-radius:50%;
+    border:6px solid #565e68;
+    img{
+      border-radius:50%;
+      border:6px solid #454d58;
+    }
+  }
+}
+
+#friends{
+  .cont{
+    img{
+      width: 240px;
+      float: left;
+
+    }
+    &:after{
       .after-clear
     }
   }

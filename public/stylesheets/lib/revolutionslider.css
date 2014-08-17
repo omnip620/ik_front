@@ -715,6 +715,21 @@ website:   	http://www.themepunch.com
     border-style:none;
 }
 
+
+.tp-caption.mediumsmall_light_white {
+    font-size:24px;
+    line-height:28px;
+    font-weight:300;
+    font-family:"Open Sans";
+    color:rgb(255, 255, 255);
+    text-decoration:none;
+    background-color:transparent;
+    padding:0px;
+    border-width:0px;
+    border-color:rgb(255, 214, 88);
+    border-style:none;
+}
+
 .tp-caption.roundedimage {
     border-width:0px;
     border-color:rgb(34, 34, 34);

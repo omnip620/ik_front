@@ -362,6 +362,7 @@ ul {
 .index-lg-block .product-info ul li .des {
   background-color: #ffffff;
   padding: 16px 16px;
+  height: 150px;
 }
 .index-lg-block .product-info ul li .des h3 {
   text-align: left;
@@ -496,6 +497,26 @@ ul {
   color: #00b998;
 }
 #contact .contact-info:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+#fans {
+  padding: 0;
+}
+#fans .circle {
+  border-radius: 50%;
+  border: 6px solid #565e68;
+}
+#fans .circle img {
+  border-radius: 50%;
+  border: 6px solid #454d58;
+}
+#friends .cont img {
+  width: 240px;
+  float: left;
+}
+#friends .cont:after {
   content: "";
   clear: both;
   display: block;
