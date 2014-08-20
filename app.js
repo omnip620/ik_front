@@ -10,6 +10,12 @@ var routes = require('./routes/index');
 var users = require('./routes/users');
 var reglogin=require('./routes/reglogin');
 var advantage=require('./routes/advantage');
+var reports=require('./routes/reports');
+var aboutus=require('./routes/aboutus');
+var recruit=require('./routes/recruit');
+var safe=require('./routes/safe');
+var contact=require('./routes/contact');
+
 
 var app = express();
 
@@ -32,6 +38,11 @@ app.use('/', routes);
 app.use('/users', users);
 app.use('/reglogin', reglogin);
 app.use('/advantage',advantage);
+app.use('/reports',reports);
+app.use('/aboutus',aboutus);
+app.use('/recruit',recruit);
+app.use('/safe',safe);
+app.use('/contact',contact);
 
 /// catch 404 and forward to error handler
 app.use(function(req, res, next) {
