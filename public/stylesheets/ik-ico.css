@@ -26,6 +26,9 @@
 .icon-uniE605:before {
     content: "\e605";
 }
+.icon-check:before {
+    content: "\e116";
+}
 .icon-presentation:before {
     content: "\e00e";
 }
@@ -37,6 +40,9 @@
 }
 .icon-profile-male:before {
     content: "\e040";
+}
+.icon-map-pin:before {
+    content: "\e047";
 }
 .icon-uniE602:before {
     content: "\e602";
@@ -53,11 +59,20 @@
 .icon-location2:before {
     content: "\e604";
 }
+.icon-arrow-right:before {
+    content: "\e609";
+}
+.icon-arrow-down-right:before {
+    content: "\e60a";
+}
 .icon-radio-unchecked:before {
     content: "\e608";
 }
 .icon-arrow-left:before {
     content: "\e607";
+}
+.icon-arrow-up:before {
+    content: "\e60b";
 }
 .icon-uniE606:before {
     content: "\e606";

@@ -8,7 +8,6 @@
     });
 
     /*validate countdown*/
-
     function getcode(e) {
         var $self = $(e), count = $self.data('count') || 30,
             Interval = setInterval(function () {
@@ -21,5 +20,10 @@
                 }
             }, 1000);
     }
+
+    $(document).scroll(function () {
+        var $header=$('.header');
+        $('body')[0].scrollTop > 91? $header.addClass('scroll'):$header.removeClass('scroll');
+    })
 
 })(window.jQuery);
