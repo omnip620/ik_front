@@ -3,13 +3,12 @@
 <head lang="zh">
   <meta charset="UTF-8">
   <title></title>
-  <link rel="stylesheet" href="../stylesheets/bootstrap.min.css" type="text/css"/>
-  <link rel="stylesheet" href="../stylesheets/font-awesome.min.css" type="text/css"/>
-  <link rel="stylesheet" href="../stylesheets/ik-ico.css" type="text/css"/>
-  <link rel="stylesheet" href="../stylesheets/lib/jquery.fullPage.css" type="text/css"/>
-  <link rel="stylesheet" href="../stylesheets/lib/revolutionslider.css" type="text/css"/>
-  <link rel="stylesheet" href="../stylesheets/lib/jquery.nouislider.css" type="text/css"/>
-  <link rel="stylesheet" href="../stylesheets/style.css" type="text/css"/>
+  <link rel="stylesheet" href="/stylesheets/bootstrap.min.css" type="text/css"/>
+  <link rel="stylesheet" href="/stylesheets/ik-ico.css" type="text/css"/>
+  <link rel="stylesheet" href="/stylesheets/lib/jquery.fullPage.css" type="text/css"/>
+  <link rel="stylesheet" href="/stylesheets/lib/revolutionslider.css" type="text/css"/>
+  <link rel="stylesheet" href="/stylesheets/lib/jquery.nouislider.css" type="text/css"/>
+  <link rel="stylesheet" href="/stylesheets/style.css" type="text/css"/>
 </head>
 <body>
 <div class="header">
@@ -27,8 +26,8 @@
     </div>
     <div class="tools">
       <ul>
-        <li><a href="javascript:;">登录</a></li>
-        <li><a href="javascript:;">免费注册</a></li>
+        <li><a href="/reglogin/login">登录</a></li>
+        <li><a href="/reglogin/register">免费注册</a></li>
       </ul>
     </div>
     <div class="clearfix"></div>
@@ -38,15 +37,15 @@
 <div class="main">
   <%- body %>
 </div>
-<div class="footer <%- footerClass?footerClass:'' %>">
+<div class="footer <%- footerClass ? footerClass : '' %>">
   <div class="t1">
     <span>爱客CRM--只为销售更容易</span>
   </div>
   <div class="sns">
     <ul>
-      <li><a href="javascript:;"><i class="fa fa-qq"></i></a></li>
-      <li><a href="javascript:;"><i class="fa fa-qrcode"></i></a></li>
-      <li><a href="javascript:;"><i class="fa fa-weibo"></i></a></li>
+      <li><a href="javascript:;"><i class="icon-uniE600"></i></a></li>
+      <li><a href="javascript:;"><i class="icon-uniE602"></i></a></li>
+      <li><a href="javascript:;"><i class="icon-uniE601"></i></a></li>
     </ul>
     <span class="copyright">沪ICP备13009389号-4沪ICP备13009389号-4</span>
   </div>
@@ -55,19 +54,21 @@
   </div>
 </div>
 </body>
-<script src="../javascripts/jquery.min.js"></script>
-<script src="../javascripts/bootstrap.min.js"></script>
-<script src="../javascripts/jquery.validate.js"></script>
-<script src="../javascripts/jquery.validate.default.js"></script>
-<script src="../javascripts/lib/jquery.themepunch.plugins.min.js"></script>
-<script src="../javascripts/lib/jquery.themepunch.revolution.min.js"></script>
-<script src="../javascripts/lib/jquery.nouislider.min.js"></script>
-<script src="http://cdn.bootcss.com/scrollup/2.4.0/jquery.scrollUp.min.js"></script>
+<script src="/javascripts/jquery.min.js"></script>
+<script src="/javascripts/bootstrap.min.js"></script>
+<script src="/javascripts/jquery.validate.js"></script>
+<script src="/javascripts/jquery.validate.default.js"></script>
+<script src="/javascripts/lib/jquery.themepunch.plugins.min.js"></script>
+<script src="/javascripts/lib/jquery.themepunch.revolution.min.js"></script>
+<script src="/javascripts/lib/jquery.nouislider.min.js"></script>
+<script src="/javascripts/lib/jquery.scrollUp.min.js"></script>
+<script src="/javascripts/lib/Scrolld.0.2.1.js"></script>
+<script src="/javascripts/lib/jquery.easings.min.js"></script>
 
-<script src="../javascripts/index.js"></script>
+<script src="/javascripts/index.js"></script>
 <%- script %>
 <script>
-  $(function(){
+  $(function () {
     $.scrollUp({
       scrollName: 'scrollUp',      // Element ID
       scrollDistance: 300,         // Distance from top/bottom before showing element (px)

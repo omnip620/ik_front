@@ -44,6 +44,12 @@
 .icon-map-pin:before {
     content: "\e047";
 }
+.icon-uniE60D:before {
+    content: "\e60d";
+}
+.icon-apple:before {
+    content: "\e60c";
+}
 .icon-uniE602:before {
     content: "\e602";
 }
@@ -70,6 +76,9 @@
 }
 .icon-arrow-left:before {
     content: "\e607";
+}
+.icon-arrow-down:before {
+    content: "\e60e";
 }
 .icon-arrow-up:before {
     content: "\e60b";

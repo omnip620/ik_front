@@ -446,6 +446,7 @@ ul:after {
   border: 1px solid #00b998;
   background-color: #00b998;
   color: #ffffff;
+  text-decoration: none;
 }
 .footer .sns {
   display: inline-block;
@@ -510,6 +511,7 @@ ul:after {
   text-align: center;
   padding-top: 60px;
   padding-bottom: 100px;
+  height: 700px;
 }
 .index-lg-block.bg-dark h1 {
   color: #ffffff;
@@ -520,6 +522,9 @@ ul:after {
 .index-lg-block.bg-dark:after,
 .index-lg-block.bg-dark:before {
   background-color: #323a47;
+}
+.index-lg-block.bg-dark > a > i {
+  color: #ffffff;
 }
 .index-lg-block::before,
 .index-lg-block::after {
@@ -541,7 +546,7 @@ ul:after {
   margin-bottom: 24px;
 }
 .index-lg-block .summary {
-  margin-bottom: 24px;
+  margin-bottom: 80px;
   font-size: 16px;
   color: #6c6c6c;
 }
@@ -572,10 +577,23 @@ ul:after {
   font-size: 13px;
   color: #6c6c6c;
 }
+.index-lg-block > a > i {
+  display: inline-block;
+  margin-top: 60px;
+  font-size: 40px;
+  color: #acacac;
+  font-weight: 200;
+}
+.index-lg-block > a:hover {
+  text-decoration: none;
+}
 #updatelog .log-info #timeline,
 #updatelog .log-info .des {
   width: 84%;
   margin: 0 auto;
+}
+#updatelog .log-info .timeline-date {
+  margin-bottom: 56px;
 }
 #updatelog .log-info .timeline-date span {
   display: block;
@@ -625,6 +643,7 @@ ul:after {
   border-radius: 50%;
   border: 1px solid #dfdfdf;
   color: #00b998;
+  margin-bottom: 24px;
   -webkit-transition: all 100ms ease-out 0s;
   -moz-transition: all 100ms ease-out 0s;
   -ms-transition: all 100ms ease-out 0s;
@@ -711,8 +730,11 @@ ul:after {
   border-radius: 50%;
   border: 6px solid #454d58;
 }
+#friends .summary {
+  margin-bottom: 24px;
+}
 #friends .cont img {
-  width: 240px;
+  width: 180px;
   float: left;
 }
 #friends .cont:after {

@@ -504,6 +504,7 @@ ul {
           border: 1px solid @color-primary;
           background-color: @color-primary;
           color: @color-white;
+          text-decoration: none;
         }
       }
     }
@@ -561,6 +562,7 @@ ul {
   text-align: center;
   padding-top: 60px;
   padding-bottom: 100px;
+  height: 700px;
   &.bg-dark {
     h1 {
       color: @color-white;
@@ -571,6 +573,11 @@ ul {
     }
     &:after, &:before {
       .bg-dark;
+    }
+    & > a {
+      & > i {
+        color: @color-white;
+      }
     }
 
   }
@@ -597,7 +604,7 @@ ul {
     margin-bottom: 24px;
   }
   .summary {
-    margin-bottom: 24px;
+    margin-bottom: 80px;
     font-size: 16px;
     color: @color-muted;
   }
@@ -631,16 +638,30 @@ ul {
       }
     }
   }
+
+  & > a {
+    & > i {
+      display: inline-block;
+      margin-top: 60px;
+      font-size: 40px;
+      color: lighten(@color-muted, 25%);
+      font-weight: 200;
+    }
+    &:hover {
+      text-decoration: none;
+    }
+  }
 }
 
 #updatelog {
-
   .log-info {
     #timeline, .des {
       width: 84%;
       margin: 0 auto;
+
     }
     .timeline-date {
+      margin-bottom: 56px;
       span {
         display: block;
         width: 16.666666%;
@@ -651,9 +672,7 @@ ul {
           color: lighten(@color-primary, 15%);
         }
       }
-
       .after-clear
-
     }
     .des {
       img {
@@ -671,11 +690,9 @@ ul {
         p {
           font-size: 16px;
           letter-spacing: 1px;
-
         }
       }
-
-      .after-clear
+      .after-clear;
 
     }
   }
@@ -686,6 +703,7 @@ ul {
     width: 25%;
     padding: 0 16px;
     .top {
+
       .icon {
         height: 200px;
         width: 200px;
@@ -693,6 +711,7 @@ ul {
         border-radius: 50%;
         border: 1px solid lighten(@color-muted, 45%);
         color: @color-primary;
+        margin-bottom: 24px;
         .transition(all, 100ms, ease-out, 0s);
         i {
           font-size: 70px;
@@ -787,15 +806,15 @@ ul {
 }
 
 #friends {
+  .summary {
+    margin-bottom: 24px;
+  }
   .cont {
     img {
-      width: 240px;
+      width: 180px;
       float: left;
-
     }
-
-    .after-clear
-
+    .after-clear;
   }
 }
 

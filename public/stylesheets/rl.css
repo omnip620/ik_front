@@ -108,7 +108,7 @@ a:hover, a:focus{
     height: 61px;
 }
 .rl .header .logo {
-    background-image: url("../img/logo.png");
+    background-image: url("/img/logo.png");
     width: 117px;
     height: 56px;
     display: inline-block;
@@ -241,9 +241,14 @@ a:hover, a:focus{
 .mobile-download a {
     margin-right: 22px;
 }
+.mobile-download a i{
+    font-size: 20px;
+    margin-right: 4px;
+}
 
 .mobile-download a:hover {
     color: #38B896;
+    text-decoration: none;
 }
 
 .mobile-download .fa {
