@@ -303,12 +303,25 @@ a.tp-reg-btn:hover {
   color: #00b998;
   border-color: #00b998;
 }
+.simplebullets .bullet.selected i:before {
+  content: "\e610";
+}
 .simplebullets .bullet i {
   font-size: 10px;
   color: #d9d9d9;
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
 }
 .simplebullets .bullet i:hover {
   color: #ffffff;
+}
+.simplebullets .bullet i:before {
+  content: "\e608";
 }
 ul {
   list-style: none;
