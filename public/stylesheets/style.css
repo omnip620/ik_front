@@ -570,7 +570,7 @@ ul:after {
   float: left;
 }
 .index-lg-block .product-info ul li {
-  box-shadow: 0 4px 2px #aaaaaa;
+  box-shadow: 0 2px 2px #d1d1d1;
   width: 300px;
 }
 .index-lg-block .product-info ul li img {
