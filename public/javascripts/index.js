@@ -9,8 +9,8 @@
         this.items = this.$element.children('a');
         this.items.on('click', $.proxy(this.click, this));
         this.aoffsetTops = [];
-        $(window).on('scroll', this.scroll)
         this.getoffsetTops();
+        $(window).on('scroll', $.proxy(this.scroll, this))
     };
     Scrollwhere.prototype = {
         click: function (e) {
@@ -19,28 +19,46 @@
             var obj = e.target || e.srcElement;
             var parent = $(obj);
             parent = parent.is('a') ? parent : parent.parent();
-            parent.siblings().children('i').removeClass('active');
-            parent.children('i').addClass('active');
             var h = this.aoffsetTops[parent.index()].offsetTop;
-            console.log(this.aoffsetTops)
             $("html,body").stop(!0).animate({scrollTop: h}, this.options.speed, this.options.easingType)
         },
         getoffsetTops: function () {
             var i = this.items.length;
             while (i--) {
-                var item = {id: this.items[i].getAttribute('href'), offsetTop: document.getElementById(this.items[i].getAttribute('href').replace('#', '')).offsetTop - 150}
+                var item = {id: this.items[i].getAttribute('href'), offsetTop: document.getElementById(this.items[i].getAttribute('href').replace('#', '')).offsetTop - 60}
                 this.aoffsetTops.unshift(item);
             }
         },
         actived: function (element) {
-            var parent = $(element);
+            var parent = $('[href="' + element + '"]');
             parent = parent.is('a') ? parent : parent.parent();
             parent.siblings().children('i').removeClass('active');
             parent.children('i').addClass('active');
+        },
+        scroll: function () {
+            var i = this.aoffsetTops.length;
+            var windowoffsetTop = $(window).scrollTop() + 60;
+            while (i--) {
+                var section = $(this.aoffsetTops[i].id),
+                    top = section.offset().top,
+                    bottom = section.outerHeight(true) + top;
+                console.log('windowoffsetTop:%d top:%d bottom:%d', windowoffsetTop, top, bottom);
+                if (windowoffsetTop >= top && windowoffsetTop <= bottom) {
+                    console.log(this.aoffsetTops[i].id);
+                    this.actived(this.aoffsetTops[i].id);
+                }
+            }
+
+            if (windowoffsetTop + $(window).height() >= $(document).height()) {
+
+                /* v1.1.0: Removed bottomAnimation */
+
+                /* Remove activeClass from menuItem before the last and add activeClass to the lastests one */
+                this.actived(this.aoffsetTops[3].id);
+
+            }
+
         }
-//        scroll: function () {
-//            console.log($(window).scrollTop());
-//        }
     };
 
 
