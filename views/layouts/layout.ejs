@@ -36,7 +36,9 @@
 
 <div class="main">
   <%- body %>
+  <%-defineContent('quicknav')%>
 </div>
+
 <div class="footer <%- footerClass ? footerClass : '' %>">
   <div class="t1">
     <span>爱客CRM--只为销售更容易</span>
@@ -74,7 +76,7 @@
       scrollDistance: 300,         // Distance from top/bottom before showing element (px)
       scrollFrom: 'top',           // 'top' or 'bottom'
       scrollSpeed: 300,            // Speed back to top (ms)
-      easingType: 'linear',        // Scroll to top easing (see http://easings.net/)
+      easingType: 'easeOutCirc', // Scroll to top easing (see http://easings.net/)
       animation: 'fade',           // Fade, slide, none
       animationSpeed: 200,         // Animation speed (ms)
       scrollTrigger: false,        // Set a custom triggering element. Can be an HTML string or jQuery object

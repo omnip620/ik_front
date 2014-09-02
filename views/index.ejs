@@ -471,14 +471,14 @@
 </div>
 <script>
   $('[data-scrolld]').scrolld({
-    speed: 500,
+    speed:750,
     offset: -66,
-    easing: 'scrolldEasing'
+    easing: 'easeInElastic'
   });
 
   jQuery(document).ready(function () {
     jQuery('#topbanner').revolution({
-      delay: 5000,
+      delay: 4000,
       startwidth: 1170,
       startheight: 700,
       hideThumbs: 10
@@ -489,9 +489,7 @@
       startheight: 700,
       hideThumbs: 10
     });
-
     var $slider = $('#timeline');
-
     $slider.noUiSlider({
       start: [1, 4],
       step: 1,

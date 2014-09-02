@@ -829,6 +829,40 @@ ul:after {
   height: 1px;
   background-color: #d3d3d3;
 }
+#advantage-quick-nav {
+  position: fixed;
+  top: 200px;
+  right: 60px;
+  color: #323a47;
+  z-index: 56;
+}
+#advantage-quick-nav a {
+  display: block;
+  height: 12px;
+  margin-bottom: 10px;
+  z-index: 2;
+}
+#advantage-quick-nav a:hover {
+  text-decoration: none;
+}
+#advantage-quick-nav a i {
+  z-index: 1;
+  font-size: 12px;
+  color: #92afd0;
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+}
+#advantage-quick-nav a i:before {
+  content: "\e608";
+}
+#advantage-quick-nav a i.active:before {
+  content: "\e610";
+}
 .reports-block {
   width: 1100px;
   margin: 0 auto;
@@ -1210,9 +1244,6 @@ ul:after {
   left: 3px;
   top: 0;
   position: absolute;
-}
-#scrollUp {
-  bottom: 100px;
 }
 #scrollUp {
   font-size: 32px;
