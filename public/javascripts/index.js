@@ -7,10 +7,10 @@
         this.$element = $(element);
         this.options = $.extend({}, $.fn.scrollwhere, options);
         this.items = this.$element.children('a');
-        this.items.on('click', $.proxy(this.click, this));
+        this.items.on('click.ew', $.proxy(this.click, this));
         this.aoffsetTops = [];
         this.getoffsetTops();
-        $(window).on('scroll', $.proxy(this.scroll, this))
+        $(window).on('scroll.ew', $.proxy(this.scroll, this))
     };
     Scrollwhere.prototype = {
         click: function (e) {
@@ -26,8 +26,9 @@
             var i = this.items.length;
             while (i--) {
                 var item = {id: this.items[i].getAttribute('href')}
-                this.aoffsetTops.unshift(item);
+                this.aoffsetTops.push(item);
             }
+            this.aoffsetTops.reverse();
         },
         actived: function (element) {
             var parent = $('[href="' + element + '"]');
@@ -52,8 +53,6 @@
             }
         }
     };
-
-
     $.fn.scrollwhere = function (option) {
         var methodReturn;
         var $set = this.each(function () {

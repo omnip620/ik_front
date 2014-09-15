@@ -132,6 +132,9 @@ body {
   display: block;
 }
 /*visual*/
+.border-xs {
+  border: 1px solid;
+}
 .text-hot {
   color: #e96264;
 }
@@ -290,9 +293,19 @@ body {
 .tparrows i:hover {
   color: #ffffff;
 }
+i.arrow-left,
+i.arrow-right {
+  background-image: url('/img/left_arrow.png');
+  width: 42px;
+  height: 82px;
+  display: block;
+}
+i.arrow-right {
+  background-image: url('/img/right_arrow.png');
+}
 a.tp-reg-btn {
   border: 1px solid #ffffff;
-  padding: 8px;
+  padding: 10px 16px;
   color: #ffffff;
   background-color: transparent;
   border-radius: 2px;
@@ -398,6 +411,7 @@ ul:after {
 }
 .header .tools li {
   float: left;
+  margin-right: 15px;
 }
 .header .tools a {
   color: #00b998;
@@ -407,6 +421,7 @@ ul:after {
   padding: 4px 8px;
 }
 .header .tools a:hover {
+  border-radius: 2px;
   color: #fff;
   background-color: #00b998;
   text-decoration: none;
@@ -536,9 +551,6 @@ ul:after {
 .index-lg-block.bg-dark:before {
   background-color: #323a47;
 }
-.index-lg-block.bg-dark > a > i {
-  color: #ffffff;
-}
 .index-lg-block::before,
 .index-lg-block::after {
   content: "";
@@ -570,8 +582,10 @@ ul:after {
   float: left;
 }
 .index-lg-block .product-info ul li {
-  box-shadow: 0 2px 2px #d1d1d1;
   width: 300px;
+}
+.index-lg-block .product-info ul li:hover {
+  box-shadow: 0 2px 2px #d1d1d1;
 }
 .index-lg-block .product-info ul li img {
   width: 100%;
@@ -591,11 +605,14 @@ ul:after {
   color: #6c6c6c;
 }
 .index-lg-block > a > i {
-  display: inline-block;
   margin-top: 60px;
-  font-size: 40px;
-  color: #acacac;
-  font-weight: 200;
+  background-image: url('/img/down_arrow.png');
+  display: inline-block;
+  width: 26px;
+  height: 14px;
+}
+.index-lg-block > a > i.arrow-up {
+  background-image: url('/img/up_arrow.png');
 }
 .index-lg-block > a:hover {
   text-decoration: none;
@@ -645,6 +662,35 @@ ul:after {
   clear: both;
   display: block;
 }
+/*.noUi-horizontal {
+  height: 26px;
+  .noUi-handle {
+    border-radius: 50%;
+    width: 21px;
+    height: 21px;
+    margin-top: 9px;
+    margin-left: 4px;
+    border: 3px solid @color-primary;
+    &:before, &:after {
+      display: none;
+    }
+  }
+}
+.noUi-background {
+  background: darken(@temp-blue, 55%);
+  box-shadow: none;
+}
+.noUi-target {
+  border:none;
+  border-radius: 50px;
+}
+.noUi-origin {
+  border-bottom-right-radius: 50px;
+  border-top-right-radius: 50px;
+}
+.noUi-connect{
+  margin: 3px;
+}*/
 #service .service-info li {
   width: 25%;
   padding: 0 16px;
@@ -656,6 +702,7 @@ ul:after {
   border-radius: 50%;
   border: 1px solid #dfdfdf;
   color: #00b998;
+  background-color: #ffffff;
   margin-bottom: 24px;
   -webkit-transition: all 100ms ease-out 0s;
   -moz-transition: all 100ms ease-out 0s;
@@ -723,6 +770,9 @@ ul:after {
 #contact .contact-info li .des {
   letter-spacing: 1px;
   font-size: 16px;
+}
+#contact .contact-info li:hover .icon {
+  background-color: #00b998;
 }
 #contact .contact-info li:hover .des {
   color: #00b998;
