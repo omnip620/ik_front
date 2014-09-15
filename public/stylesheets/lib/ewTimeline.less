@@ -1,0 +1,47 @@
+@temp-blue: #d0be4b;
+@color-primary: #00b998;
+
+.border-radius {
+  border-radius: 50px;
+}
+
+.height(@height:28px) {
+  height: @height;
+}
+
+.ew-tl-handle {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  position: absolute;
+  background-color: #FFFFFF;
+  display: inline-block;
+  top: 3px;
+  left: 3px;
+  content: ' ';
+  cursor: w-resize;
+}
+
+.ew-tl {
+  width: 84%;
+  margin: 0 auto;
+  background-color: darken(@temp-blue, 57%);
+  padding: 4px 2px;
+  .border-radius();
+  .ew-tl-bar {
+    .border-radius();
+    background-color: @color-primary;
+    height: 28px;
+    position: relative;
+    left: 20%;
+    width: 40%;
+    &:before,&:after {
+      .ew-tl-handle();
+    }
+    &:after{
+      left: auto;
+      right: 3px;
+      cursor: e-resize;
+    }
+  }
+}
