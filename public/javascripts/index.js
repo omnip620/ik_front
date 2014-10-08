@@ -2,7 +2,19 @@
  * Created by pan on 14-7-15.
  */
 
-+function ($){
+  +function ($){
+    var userAgent = navigator.userAgent.toLowerCase();
+    $.browser = {
+      version: (userAgent.match(/.+(?:rv|it|ra|ie)[\/: ]([\d.]+)/)||[])[1],
+      safari: /webkit/.test(userAgent),
+      opera: /opera/.test(userAgent),
+      msie: /msie/.test(userAgent)&& !/opera/.test(userAgent),
+      mozilla: /mozilla/.test(userAgent)&& !/(compatible|webkit)/.test(userAgent)
+    };
+
+  }(window.jQuery)
+
+  + function ($){
   var Scrollwhere = function (element, options){
     this.$element = $(element);
     this.options = $.extend({}, $.fn.scrollwhere, options);
@@ -100,6 +112,12 @@ $(function (){
   $('#remove-warning').on('click', function (){
     $(this).closest('.warning').remove();
   });
+
+  if($.browser.msie&&$.browser.version < 9) {
+    $('.warning').removeClass('hide');
+    console.log('111')
+  }
+
 
   $.scrollUp({
     scrollName: 'scrollUp',      // Element ID
