@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="/stylesheets/bootstrap.min.css" type="text/css"/>
   <link rel="stylesheet" href="/stylesheets/ik-ico.css" type="text/css"/>
   <link rel="stylesheet" href="/stylesheets/lib/jquery.fullPage.css" type="text/css"/>
-  <link rel="stylesheet" href="/stylesheets/lib/revolutionslider.cssh" type="text/css"/>
+  <link rel="stylesheet" href="/stylesheets/lib/revolutionslider.css" type="text/css"/>
   <link rel="stylesheet" href="/stylesheets/lib/jquery.nouislider.css" type="text/css"/>
   <link rel="stylesheet" href="/stylesheets/lib/ewTimeline.css" type="text/css"/>
   <link rel="stylesheet" href="/stylesheets/style.css" type="text/css"/>
@@ -19,8 +19,6 @@
     <a href="http://www.microsoft.com/zh-cn/download/internet-explorer.aspx" target="_blank"><span>IE9+</span></a> 、<a href="http://www.firefox.com.cn/" target="_blank"><span>Firfox</span></a>或<a href="http://www.google.cn/intl/zh-CN/chrome/" target="_blank"><span>Chrome</span></a>浏览器打开，否则将无法体验完整的产品功能。</p>
   <a href="javascript:;" id="remove-warning"><i class="icon-cancel-circle"></i></a>
 </div>
-
-
 <div class="header">
   <div class="cont">
     <div class="brand-logo">
@@ -49,7 +47,7 @@
 
 <div class="main">
   <%- body %>
-  <%- defineContent('quicknav') %>
+  <%-defineContent('quicknav')%>
 </div>
 
 <div class="footer <%- footerClass ? footerClass : '' %>">
@@ -80,7 +78,9 @@
 <script src="/javascripts/lib/Scrolld.0.2.1.js"></script>
 <script src="/javascripts/lib/jquery.easings.min.js"></script>
 <script src="/javascripts/lib/jquery-ui.js"></script>
+
 <script src="/javascripts/index.js"></script>
+
 <script src="//localhost:9997/livereload.js"></script>
 
 <%- script %>
