@@ -285,6 +285,27 @@ body {
   padding: 0;
   margin: 0;
 }
+.warning {
+  text-align: center;
+  background-color: #FDF3CC;
+  font-size: 16px;
+  padding: 8px;
+  color: #6c6c6c;
+}
+.warning i:first-child {
+  position: relative;
+  top: 2px;
+}
+.warning p {
+  display: inline;
+}
+.warning p span {
+  color: #e96264;
+}
+.warning a {
+  color: #6c6c6c;
+  text-decoration: none;
+}
 /*tap*/
 .tparrows i {
   font-size: 70px;
@@ -436,7 +457,6 @@ ul:after {
 }
 .main {
   min-height: 200px;
-  padding-bottom: 60px;
   padding-top: 92px;
   background-color: #f9f9f9;
 }
@@ -1257,33 +1277,6 @@ ul:after {
   content: "";
   clear: both;
   display: block;
-}
-#contact-block .tm {
-  background: url('/images/contactus_bg.jpg') left top no-repeat;
-}
-#contact-block .tm > * {
-  margin-bottom: 40px;
-}
-#contact-block .tm p {
-  font-size: 32px;
-}
-#contact-block .tm i {
-  font-size: 48px;
-  display: block;
-  margin-bottom: 40px;
-}
-#contact-block .tm a {
-  color: #ffffff;
-  background-color: #e96264;
-  padding: 15px 45px;
-  display: inline-block;
-  border-radius: 4px;
-  font-size: 16px;
-  transition: background-color 0.2s ease-in-out;
-}
-#contact-block .tm a:hover {
-  background-color: #00b998;
-  text-decoration: none;
 }
 .x {
   line-height: 1em;

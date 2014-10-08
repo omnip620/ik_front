@@ -24,71 +24,74 @@
 }
 
 .icon-uniE605:before {
-    content: "\e605";
+  content: "\e605";
 }
 .icon-check:before {
-    content: "\e116";
+  content: "\e116";
 }
 .icon-presentation:before {
-    content: "\e00e";
+  content: "\e00e";
 }
 .icon-bargraph:before {
-    content: "\e018";
+  content: "\e018";
 }
 .icon-linegraph:before {
-    content: "\e039";
+  content: "\e039";
 }
 .icon-profile-male:before {
-    content: "\e040";
+  content: "\e040";
 }
 .icon-map-pin:before {
-    content: "\e047";
+  content: "\e047";
+}
+.icon-uniE60F:before {
+  content: "\e60f";
 }
 .icon-uniE608:before {
-    content: "\e608";
+  content: "\e608";
 }
 .icon-uniE610:before {
-    content: "\e610";
+  content: "\e610";
 }
 .icon-uniE60D:before {
-    content: "\e60d";
+  content: "\e60d";
 }
 .icon-apple:before {
-    content: "\e60c";
+  content: "\e60c";
 }
 .icon-uniE602:before {
-    content: "\e602";
+  content: "\e602";
 }
 .icon-uniE601:before {
-    content: "\e601";
+  content: "\e601";
 }
 .icon-uniE600:before {
-    content: "\e600";
+  content: "\e600";
 }
 .icon-location:before {
-    content: "\e603";
+  content: "\e603";
 }
 .icon-location2:before {
-    content: "\e604";
+  content: "\e604";
+}
+.icon-cancel-circle:before {
+  content: "\e611";
 }
 .icon-arrow-right:before {
-    content: "\e609";
+  content: "\e609";
 }
 .icon-arrow-down-right:before {
-    content: "\e60a";
+  content: "\e60a";
 }
 .icon-arrow-left:before {
-    content: "\e607";
-}
-.icon-arrow-left:before {
-    content: "\e607";
+  content: "\e607";
 }
 .icon-arrow-down:before {
-    content: "\e60e";
+  content: "\e60e";
 }
 .icon-arrow-up:before {
-    content: "\e60b";
+  content: "\e60b";
 }
 .icon-uniE606:before {
-    content: "\e606";
+  content: "\e606";
 }

@@ -187,7 +187,7 @@
     <div class="clearfix"></div>
   </div>
 
-  <a href="javascript:;" data-scrolld="updatelog"><i ></i></a>
+  <a href="javascript:;" data-scrolld="updatelog"><i></i></a>
 
 
 </div>
@@ -198,15 +198,8 @@
   <div class="summary">每次升级、迭代，每一个细节的完善，都倾注了我们不懈的努力，相信你会感受到那份用心</div>
   <div class="cont log-info">
 
-    <div id="new-timeline" style="margin-bottom: 40px">
-      <div class="ew-tl">
-        <div class="ew-tl-bar">
-          <!--<div class="ew-tl-handle"></div>-->
-        </div>
-      </div>
+    <div id="new-timeline">
     </div>
-
-
     <div id="timeline"></div>
     <div class="timeline-date">
       <span>2014.10</span>
@@ -230,7 +223,7 @@
       </div>
     </div>
   </div>
-  <a href="javascript:;" data-scrolld="service"><i ></i></a>
+  <a href="javascript:;" data-scrolld="service"><i></i></a>
 </div>
 
 <div id="service" class="index-lg-block bg-muted">
@@ -282,7 +275,7 @@
       </li>
     </ul>
   </div>
-  <a href="javascript:;" data-scrolld="fans"><i ></i></a>
+  <a href="javascript:;" data-scrolld="fans"><i></i></a>
 </div>
 
 <div id="fans" class="index-lg-block bg-dark">
@@ -414,7 +407,7 @@
       </ul>
     </div>
   </div>
-  <a href="javascript:;" data-scrolld="friends"><i ></i></a>
+  <a href="javascript:;" data-scrolld="friends"><i></i></a>
 </div>
 <div id="friends" class="index-lg-block bg-muted">
   <h1>他们在使用爱客CRM</h1>
@@ -437,7 +430,7 @@
     <img src="/images/friednslink/wwd-logo-proteus.png" alt=""/>
     <img src="/images/friednslink/wwd-logo-wam.png" alt=""/>
   </div>
-  <a href="javascript:;" data-scrolld="contact"><i ></i></a>
+  <a href="javascript:;" data-scrolld="contact"><i></i></a>
 </div>
 <div id="contact" class="index-lg-block bg-dark">
   <h1>联系我们</h1>
@@ -458,7 +451,6 @@
       <li>
         <div class="top">
           <div class="icon"><img src="/img/ico_phone.png" alt=""/></div>
-
           <h3>联系电话</h3>
         </div>
         <div class="des">
@@ -481,7 +473,7 @@
 </div>
 <script>
   $('[data-scrolld]').scrolld({
-    speed:750,
+    speed: 750,
     offset: -66,
     easing: 'swing'
   });
@@ -499,39 +491,76 @@
       startheight: 700,
       hideThumbs: 10
     });
-    var $slider = $('#timeline');
-    $slider.noUiSlider({
-      start: [1, 4],
-      step: 1,
-      connect: true,
-      direction: 'ltr',
-      orientation: 'horizontal',
-      behaviour: 'snap',
-      range: {
-        'min': 0,
-        'max': 5
-      },
-      serialization: {
-//                lower: [
-//                    $.Link({
-//                        target: $("#value-input")
-//                    })
-//                ],
-//                upper: [
-//                    $.Link({
-//                        target: $("#value-span"),
-//                        method: "html"
-//                    })
-//                ],
-        format: {
-          mark: '.',
-          decimals: 0
+    /* var $slider = $('#timeline');
+     $slider.noUiSlider({
+     start: [1, 4],
+     step: 1,
+     connect: true,
+     direction: 'ltr',
+     orientation: 'horizontal',
+     behaviour: 'snap',
+     range: {
+     'min': 0,
+     'max': 5
+     },
+     serialization: {
+     //                lower: [
+     //                    $.Link({
+     //                        target: $("#value-input")
+     //                    })
+     //                ],
+     //                upper: [
+     //                    $.Link({
+     //                        target: $("#value-span"),
+     //                        method: "html"
+     //                    })
+     //                ],
+     format: {
+     mark: '.',
+     decimals: 0
+     }
+     }
+     });
+     $slider.on('slide', function () {
+     var dates = $('.timeline-date').children('span');
+     dates.not(dates.slice($slider.val()[0], Number($slider.val()[1]) + 1).addClass('active')).removeClass('active');
+     });*/
+
+
+    $('#new-timeline').slider({
+      range: true,
+      min: 0,
+      max: 50,
+      step:10,
+      animate: "fast",
+      values: [10, 40 ],
+      slide: function (event, ui) {
+        var handles = $(this).children('.ui-slider-handle'),
+            handleLeft = handles.eq(0),
+            handleRight = handles.eq(1);
+        if (ui.values[ 0 ] == ui.values[1]) {
+          if (ui.values[ 0 ] == 0) {
+            handleLeft.css('marginLeft', '5px');
+            handleRight.css('marginLeft', '5px');
+          }
+          else if (ui.values[ 0 ] == 5) {
+            handleLeft.css('marginLeft', '-26px');
+            handleRight.css('marginLeft', '-26px');
+          }
+          else {
+            var ml = $(this).children('.ui-slider-handle').not(ui.handle).css('marginLeft')
+            handleLeft.css('marginLeft', ml);
+            handleRight.css('marginLeft', ml);
+          }
         }
+        else {
+          handleLeft.css('marginLeft', '5px');
+          handleRight.css('marginLeft', '-26px');
+        }
+        var dates = $('.timeline-date').children('span');
+        dates.not(dates.slice(ui.values[ 0 ]/10, ui.values[ 1 ]/10 + 1).addClass('active')).removeClass('active');
+        $("#amount").val("$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ]);
       }
     });
-    $slider.on('slide', function () {
-      var dates = $('.timeline-date').children('span');
-      dates.not(dates.slice($slider.val()[0], Number($slider.val()[1]) + 1).addClass('active')).removeClass('active');
-    })
   });
 </script>
