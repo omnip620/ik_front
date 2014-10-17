@@ -869,12 +869,18 @@ ul:after {
 .advantage-block .cont {
   padding-top: 85px;
 }
+.advantage-block .cont .pull-right {
+  margin-right: 80px;
+}
 .advantage-block img {
   display: block;
 }
 .advantage-block h3 {
   color: #6c6c6c;
   margin-bottom: 35px;
+}
+.advantage-block ul {
+  margin-top: 28px;
 }
 .advantage-block ul li {
   padding: 4px 0;
