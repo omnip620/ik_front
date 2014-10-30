@@ -2,19 +2,19 @@
  * Created by pan on 14-7-15.
  */
 
-  +function ($){
-    var userAgent = navigator.userAgent.toLowerCase();
-    $.browser = {
-      version: (userAgent.match(/.+(?:rv|it|ra|ie)[\/: ]([\d.]+)/)||[])[1],
-      safari: /webkit/.test(userAgent),
-      opera: /opera/.test(userAgent),
-      msie: /msie/.test(userAgent)&& !/opera/.test(userAgent),
-      mozilla: /mozilla/.test(userAgent)&& !/(compatible|webkit)/.test(userAgent)
-    };
++function ($){
+  var userAgent = navigator.userAgent.toLowerCase();
+  $.browser = {
+    version: (userAgent.match(/.+(?:rv|it|ra|ie)[\/: ]([\d.]+)/)||[])[1],
+    safari: /webkit/.test(userAgent),
+    opera: /opera/.test(userAgent),
+    msie: /msie/.test(userAgent)&& !/opera/.test(userAgent),
+    mozilla: /mozilla/.test(userAgent)&& !/(compatible|webkit)/.test(userAgent)
+  };
 
-  }(window.jQuery)
+}(window.jQuery);
 
-  +function ($){
++function ($){
   var attr = 'placeholder', nativeSupported = attr in document.createElement('input')
 
   $.fn.placeholder = function (options){
@@ -122,10 +122,10 @@
     })
   }
 
-}(window.jQuery)
+}(window.jQuery);
 
 
-  + function ($){
++function ($){
   var Scrollwhere = function (element, options){
     this.$element = $(element);
     this.options = $.extend({}, $.fn.scrollwhere, options);
@@ -194,7 +194,82 @@
 
 
 }(window.jQuery);
+
+
+(function ($){
+  var PwdStr = function (element, options){
+    this.$element = $(element);
+    this.options = $.extend({}, $.fn.pwdstr.defaults, options);
+
+    this.characters = 0;
+    this.capitalletters = 0;
+    this.loweletters = 0;
+    this.number = 0;
+    this.special = 0;
+    this.upperCase = new RegExp('[A-Z]');
+    this.lowerCase = new RegExp('[a-z]');
+    this.numbers = new RegExp('[0-9]');
+    this.specialchars = new RegExp('([!,%,&,@,#,$,^,*,?,_,~])');
+    this.$element.on('keyup', $.proxy(this.show, this));
+  };
+  PwdStr.prototype = {
+    check: function (){
+      var val = this.$element.val();
+      this.characters = val.length > 8 ? 1 : 0;
+      this.capitalletters = val.match(this.upperCase) ? 1 : 0;
+      this.loweletters = val.match(this.lowerCase) ? 1 : 0;
+      this.number = val.match(this.numbers) ? 1 : 0;
+      this.special = val.match(this.specialchars) ? 1 : 0;
+      return this.characters + this.capitalletters + this.loweletters + this.number + this.special;
+    },
+    show: function (){
+      var $text = this.$element.nextAll('.pwdstr');
+      if(!this.$element.val()) {
+        $text.remove();
+        return;
+      }
+      var text = '密码安全度：';
+      var style;
+      var level = this.check();
+      if(level == 1) {
+        text += '菜B';
+        style = "text-hot";
+      }
+      else if(level == 2) {
+        text += '还行';
+        style = "text-primary";
+      }
+      else if(level >= 3) {
+        text += '牛B';
+        style = "text-primary";
+      }
+      if($text.length) {
+        $text.eq(0).html(text).attr('class', 'pwdstr ' + style);
+        return;
+      }
+      this.$element.after('<p class="pwdstr ' + style + '">' + text + '</p> ');
+    }
+  };
+
+  $.fn.pwdstr = function (option){
+    var methodReturn;
+    var $set = this.each(function (){
+      var $this = $(this);
+      var data = $this.data('pwdstr');
+      if(!data) {
+        var options = typeof option === 'object'&&option;
+        $this.data('pwdstr', new PwdStr(this, options));
+      }
+      if(typeof option === "string") methodReturn = data[option](value);
+    });
+    return (methodReturn === undefined) ? $set : methodReturn;
+  };
+  $.fn.pwdstr.defaults = {};
+  $.fn.pwdstr.Constructor = PwdStr;
+})(window.jQuery);
+
 $(function (){
+  $('[data-toggle="pwdstr"]').pwdstr();
   $('.rl .nav a').on('click', function (){
     var $self = $(this);
     $self.toggleClass('close-me');

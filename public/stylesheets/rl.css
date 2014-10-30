@@ -334,3 +334,10 @@ a:hover, a:focus {
   text-align: center;
   margin-top: 8px;
 }
+.select-address{
+  width: 32%;
+  float: left;
+}
+.select-address:not(:first-child){
+  margin-left: 2%;
+}
