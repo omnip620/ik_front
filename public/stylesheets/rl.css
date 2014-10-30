@@ -51,6 +51,14 @@ a:hover, a:focus {
   color: #949AA7;
 }
 
+.text-primary {
+  color: #00b998;
+}
+
+.text-hot {
+  color: #FF0000;
+}
+
 /*validate*/
 .validate-input-error {
   border: 1px solid #FF0000;
@@ -96,12 +104,11 @@ a:hover, a:focus {
 }
 
 .rl .wrap {
-  width: 500px;
+  width: 550px;
   margin: 0 auto;
 }
 
 .rl .header {
-  text-align: center;
   margin: 20px 0;
   position: relative;
   height: 61px;
@@ -259,4 +266,71 @@ a:hover, a:focus {
 .mobile-download .fa {
   font-size: 22px;
   margin-right: 4px;
+}
+
+.smsinfo {
+  position: relative;
+  top: 6px;
+}
+
+.register-step {
+  float: right;
+}
+
+.register-step .step {
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  background-color: #4a515c;
+  float: left;
+  margin: 10px 45px 0 45px;
+  padding: 3px;
+  position: relative;
+  z-index: 2;
+}
+
+.register-step .line {
+  height: 3px;
+  background-color: #4a515c;
+  margin: 0 auto;
+  width: 210px;
+  position: relative;
+  top: 19px;
+}
+
+.register-step .line.inner {
+  height: 3px;
+  background-color: #00b998;
+  position: relative;
+  top: 16px;
+  z-index: 3;
+
+}
+
+.register-step .line.inner.s2 {
+  width: 105px;
+  left: -51px;
+}
+
+.register-step .step .inner-circle {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #00b998;
+  display: block;
+}
+
+.register-step .step .inner-circle i {
+  position: relative;
+  top: -3px;
+  left: 2px;
+  color: #ffffff;
+  font-size: 11px;
+}
+.register-step .title span {
+  color: #00b998;
+  width: 32.3333333333%;
+  display: inline-block;
+  text-align: center;
+  margin-top: 8px;
 }
