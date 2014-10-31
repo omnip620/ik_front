@@ -299,11 +299,11 @@
     },
     processing: function (i){
       this.$points.eq(i).find('.inner-circle').removeClass('hide').children().hide();
-      var width = (this.length - this.options.step) / (this.length - 1);
-      if(width == 1) return;
-      this.$line.css({'width': width ? width * 100 + '%' : '100%'}).removeClass('hide');
+
     },
     complete: function (i){
+      var width = (this.length - this.options.step) / (this.length - 1);
+      this.$line.css({'width': width ? width * 100 + '%' : '100%'}).removeClass('hide');
       this.$points.eq(i).find('.inner-circle').removeClass('hide');
     },
     circle: function (){
