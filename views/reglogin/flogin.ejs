@@ -1,0 +1,30 @@
+<div class="content">
+  <div class="title">验证账号</div>
+  <div class="form">
+    <form action="" class="text-grey" method="get" id="form1">
+      <div class="form-group">
+        <input type="text" class="form-control input-lg" placeholder="请输入您的手机号/邮箱"/>
+      </div>
+      <div class="form-group">
+        <a href="javascript:;" class="btn btn-lg btn-primary J-getcode">获取验证码</a>
+        <span data-toggle="popover" class="smsinfo"> <i class="text-primary icon-uniE612 icon-2x"></i></span>
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control input-lg" id="" placeholder="请输入验证码">
+      </div>
+      <div class="form-group text-right clearfix">
+        <a href="/reglogin/init" class="btn btn-lg btn-primary pull-left col-sm-12">验 证</a>
+      </div>
+      <a href="changepwd" class="a-grey">暂时跳过，以后再验证</a>
+    </form>
+  </div>
+</div>
+
+<script type="text/javascript">
+  $(function (){
+    $('[data-toggle="step"]').step({
+      items:['验证帐号','修改密码','完善资料'],
+      step:1
+    })
+  })
+</script>
