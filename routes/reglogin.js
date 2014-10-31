@@ -40,4 +40,12 @@ router.get('/flogin', function(req, res) {
 router.get('/changepwd', function(req, res) {
   res.render('reglogin/changepwd');
 });
+
+router.get('/completeinfo', function(req, res) {
+  res.render('reglogin/completeinfo');
+});
+
+router.get('/welcome', function(req, res) {
+  res.render('reglogin/welcome',{layout:false});
+});
 module.exports = router;

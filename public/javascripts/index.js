@@ -232,15 +232,15 @@
       var style;
       var level = this.check();
       if(level == 1) {
-        text += '菜B';
+        text += '弱';
         style = "text-hot";
       }
       else if(level == 2) {
-        text += '还行';
+        text += '中';
         style = "text-primary";
       }
       else if(level >= 3) {
-        text += '牛B';
+        text += '强';
         style = "text-primary";
       }
       if($text.length) {
