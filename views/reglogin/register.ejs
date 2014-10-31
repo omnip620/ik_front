@@ -27,6 +27,7 @@
       </div>
       <div class="form-group text-right">
         <a href="/reglogin/init" class="btn btn-lg btn-primary pull-left w-m">下一步</a>
+
         <div class="form-tools ">已有爱客帐号？<a href="/reglogin/login" class="a-primary">立即登录</a></div>
       </div>
       <div class="text-primary">
@@ -35,3 +36,13 @@
     </form>
   </div>
 </div>
+
+
+<script type="text/javascript">
+  $(function (){
+    $('[data-toggle="step"]').step({
+      items:['注册','初始化设置','完成'],
+      step:1
+    })
+  })
+</script>

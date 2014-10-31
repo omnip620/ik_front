@@ -31,4 +31,13 @@ router.get('/findpwd2', function(req, res) {
   res.render('reglogin/findpwd2');
 });
 
+
+router.get('/flogin', function(req, res) {
+  res.render('reglogin/flogin');
+});
+
+
+router.get('/changepwd', function(req, res) {
+  res.render('reglogin/changepwd');
+});
 module.exports = router;

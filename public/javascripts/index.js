@@ -268,6 +268,88 @@
   $.fn.pwdstr.Constructor = PwdStr;
 })(window.jQuery);
 
+
+(function ($){
+  var Step = function (element, options){
+
+    this.$element = $(element);
+    this.options = $.extend({}, $.fn.step.defaults, options);
+    this.items = this.options.items;
+    this.length = this.items.length;
+    this.$points = '';
+    this.$line = '';
+    this.circle();
+    this.show();
+  };
+  Step.prototype = {
+    show: function (){
+      var currentStep = this.options.step;
+      if(currentStep == 1) {
+        this.processing(currentStep - 1);
+        return;
+      }
+      for (var i = 0, l = this.options.step; i < l; i++) {
+        if(i == l - 1) {
+          this.processing(i);
+        }
+        else {
+          this.complete(i);
+        }
+      }
+    },
+    processing: function (i){
+      this.$points.eq(i).find('.inner-circle').removeClass('hide').children().hide();
+      var width = (this.length - this.options.step) / (this.length - 1);
+      if(width == 1) return;
+      this.$line.css({'width': width ? width * 100 + '%' : '100%'}).removeClass('hide');
+    },
+    complete: function (i){
+      this.$points.eq(i).find('.inner-circle').removeClass('hide');
+    },
+    circle: function (){
+      var temp = '<div class="step"><span class="inner-circle hide"><i class="icon-check"></i></span></div>';
+      var points = '<div class="visual">';
+      var l = this.length;
+      while (l--){
+        points += temp;
+      }
+      points += '</div>';
+      var $visual = $(points).append(this.line());
+      this.$points = $visual.find('.step');
+      this.$line = $visual.find('.line.inner');
+      this.$element.append($visual, this.title());
+    },
+    line: function (){
+      var temp = '<div class="line"><div class="line inner hide"></div></div>';
+      return temp;
+    },
+    title: function (){
+      var titles = '<div class="title">';
+      for (var i = 0, l = this.length; i < l; i++) {
+        titles += '<span>' + this.items[i] + '</span>'
+      }
+      titles += '</div>';
+      return titles;
+    }
+  };
+  $.fn.step = function (option){
+    var methodReturn;
+    var $set = this.each(function (){
+      var $this = $(this);
+      var data = $this.data('step');
+      if(!data) {
+        var options = typeof  option === 'object'&&option;
+        $this.data('step', new Step(this, options))
+      }
+      if(typeof option === 'string') methodReturn = data[option](value);
+    });
+    return (methodReturn === undefined) ? $set : methodReturn;
+  };
+  $.fn.step.defaults = {};
+  $.fn.step.Constructor = Step;
+})
+(window.jQuery);
+
 $(function (){
   $('[data-toggle="pwdstr"]').pwdstr();
   $('.rl .nav a').on('click', function (){
@@ -321,5 +403,4 @@ $(function (){
     $('.warning').removeClass('hide');
   }
   $('input[placeholder]').placeholder();
-
 });
