@@ -336,3 +336,8 @@ a:hover, a:focus {
 .select-address:not(:first-child){
   margin-left: 2%;
 }
+
+.uploadify object{
+  position: absolute;
+  z-index: 1;
+}
