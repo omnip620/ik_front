@@ -16,6 +16,8 @@ var recruit=require('./routes/recruit');
 var safe=require('./routes/safe');
 var contact=require('./routes/contact');
 
+var help=require('./routes/help');
+
 
 var app = express();
 
@@ -43,6 +45,8 @@ app.use('/aboutus',aboutus);
 app.use('/recruit',recruit);
 app.use('/safe',safe);
 app.use('/contact',contact);
+
+app.use('/help',help);
 
 /// catch 404 and forward to error handler
 app.use(function(req, res, next) {

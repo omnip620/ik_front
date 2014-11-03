@@ -204,18 +204,17 @@ i.arrow-right {
 i.arrow-right {
   background-image: url('/img/right_arrow.png');
 }
-a.tp-reg-btn {
+.tp-caption a.tp-reg-btn {
   border: 1px solid #ffffff;
   padding: 10px 16px;
-  color: #ffffff;
-  background-color: transparent;
   border-radius: 2px;
   display: block;
   font-size: 24px;
+  color: #ffffff;
 }
-a.tp-reg-btn:hover {
-  color: #00b998;
-  border-color: #00b998;
+.tp-caption a.tp-reg-btn:hover {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 .simplebullets .bullet.selected i:before {
   content: "\e610";
@@ -377,6 +376,9 @@ ul:after {
   text-decoration: none;
 }
 .footer .sns {
+  display: inline-block;
+}
+.footer .sns ul {
   display: inline-block;
 }
 .footer .t1,
