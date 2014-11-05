@@ -30,26 +30,8 @@
 .icon-uniE612:before {
   content: "\e612";
 }
-.icon-uniE605:before {
-  content: "\e605";
-}
-.icon-check:before {
-  content: "\e116";
-}
-.icon-presentation:before {
-  content: "\e00e";
-}
-.icon-bargraph:before {
-  content: "\e018";
-}
-.icon-linegraph:before {
-  content: "\e039";
-}
-.icon-profile-male:before {
-  content: "\e040";
-}
-.icon-map-pin:before {
-  content: "\e047";
+.icon-check-circle:before {
+  content: "\f058";
 }
 .icon-uniE60F:before {
   content: "\e60f";
@@ -75,6 +57,27 @@
 .icon-uniE600:before {
   content: "\e600";
 }
+.icon-uniE605:before {
+  content: "\e605";
+}
+.icon-check:before {
+  content: "\e116";
+}
+.icon-presentation:before {
+  content: "\e00e";
+}
+.icon-bargraph:before {
+  content: "\e018";
+}
+.icon-linegraph:before {
+  content: "\e039";
+}
+.icon-profile-male:before {
+  content: "\e040";
+}
+.icon-map-pin:before {
+  content: "\e047";
+}
 .icon-location:before {
   content: "\e603";
 }
@@ -89,6 +92,9 @@
 }
 .icon-arrow-down-right:before {
   content: "\e60a";
+}
+.icon-compose:before {
+  content: "\e613";
 }
 .icon-arrow-left:before {
   content: "\e607";

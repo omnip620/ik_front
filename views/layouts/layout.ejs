@@ -14,8 +14,11 @@
 <body>
 <div class="warning hide">
   <i class="icon-uniE60F m-r-s"></i>
+
   <p>系统检测到<span>您所使用的浏览器版本较低</span>，推荐使用
-    <a href="http://www.microsoft.com/zh-cn/download/internet-explorer.aspx" target="_blank"><span>IE9+</span></a> 、<a href="http://www.firefox.com.cn/" target="_blank"><span>Firfox</span></a>或<a href="http://www.google.cn/intl/zh-CN/chrome/" target="_blank"><span>Chrome</span></a>浏览器打开，否则将无法体验完整的产品功能。</p>
+    <a href="http://www.microsoft.com/zh-cn/download/internet-explorer.aspx" target="_blank"><span>IE9+</span></a> 、<a
+        href="http://www.firefox.com.cn/" target="_blank"><span>Firfox</span></a>或<a
+        href="http://www.google.cn/intl/zh-CN/chrome/" target="_blank"><span>Chrome</span></a>浏览器打开，否则将无法体验完整的产品功能。</p>
   <a href="javascript:;" id="remove-warning"><i class="icon-cancel-circle"></i></a>
 </div>
 <div class="header">
@@ -49,23 +52,28 @@
 
 <div class="main">
   <%- body %>
-  <%-defineContent('quicknav')%>
+  <%- defineContent('quicknav') %>
 </div>
 
-<div class="footer <%- footerClass ? footerClass : '' %>">
+<div class="footer <%- footerClass||'' %>">
   <div class="t1">
-    <span>爱客CRM--只为销售更容易</span>
+    <span>爱客CRM - 只为提升你的销售业绩</span>
   </div>
   <div class="sns">
     <ul>
       <!--<li><a href="javascript:;"><i class="icon-uniE600"></i></a></li>-->
-      <li><a href="javascript:;"><i class="icon-uniE602"></i></a></li>
+      <li class="bqr">
+        <a href="javascript:;"><i class="icon-uniE602"></i></a>
+
+          <img src="/images/qr.jpg" alt=""/>
+       </li>
       <!--<li><a href="javascript:;"><i class="icon-uniE601"></i></a></li>-->
     </ul>
     <span class="copyright">沪ICP备13009389号-4</span>
   </div>
   <div class="t2">
-    <span>欢迎拨打：138-0181-8364</span>
+    <span>欢迎拨打：4000-365-711
+</span>
   </div>
 </div>
 </body>

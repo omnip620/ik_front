@@ -377,9 +377,20 @@ ul:after {
 }
 .footer .sns {
   display: inline-block;
+  position: relative;
 }
 .footer .sns ul {
   display: inline-block;
+}
+.footer .sns .bqr a:hover + img {
+  display: block;
+}
+.footer .sns .bqr img {
+  position: absolute;
+  top: -125px;
+  display: none;
+  width: 120px;
+  height: 120px;
 }
 .footer .t1,
 .footer .t2 {
@@ -707,16 +718,47 @@ ul:after {
   clear: both;
   display: block;
 }
+.itools {
+  position: fixed;
+  right: 0;
+  top: 300px;
+  z-index: 999999;
+  color: #ffffff;
+}
+.itools img {
+  width: 120px;
+  height: 120px;
+  display: none;
+  position: absolute;
+  right: 0;
+}
+.itools .show-qr:hover img {
+  display: block;
+}
+.itools li {
+  background-color: rgba(0, 0, 0, 0.35);
+  padding: 0 6px;
+  margin-bottom: 1px;
+  text-align: center;
+}
+.itools li a {
+  color: #ffffff;
+  font-size: 22px;
+}
+.itools li a:hover {
+  text-decoration: none;
+}
 /*content page*/
 .top-banner {
   height: 250px;
-  background: url('/images/product_banner_bg.jpg') center top no-repeat;
+  background: url('/images/product_banner_bg.png') center top no-repeat;
 }
 .top-banner .cont {
   width: 50%;
   float: right;
   padding-top: 40px;
   padding-left: 180px;
+  color: #ffffff;
 }
 .top-banner .cont p {
   font-size: 18px;
@@ -741,47 +783,30 @@ ul:after {
 }
 .advantage-block {
   width: 1100px;
-  margin: 0 auto 20px auto;
+  margin: 0 auto;
+  padding: 70px 0;
 }
 .advantage-block:after {
   content: "";
   clear: both;
   display: block;
 }
-.advantage-block .cont {
-  padding-top: 85px;
-}
-.advantage-block .cont .pull-right {
-  margin-right: 80px;
-}
-.advantage-block img {
-  display: block;
-}
-.advantage-block h3 {
-  color: #6c6c6c;
-  margin-bottom: 35px;
-}
-.advantage-block ul {
-  margin-top: 28px;
-}
-.advantage-block ul li {
-  padding: 4px 0;
-}
-.advantage-block ul li i {
-  margin-right: 15px;
+.advantage-block header .num {
+  background: url('/images/title.png') no-repeat center center;
+  float: left;
+  width: 63px;
+  height: 63px;
+  line-height: 53px;
+  text-align: center;
+  font-size: 26px;
   color: #ffffff;
-  background-color: #a0a0a0;
-  border: 3px solid #dadada;
-  border-radius: 50%;
-  font-size: 10px;
-  padding: 2px;
 }
-.advantage-block ul li:hover {
-  color: #00b998;
+.advantage-block header h2 {
+  padding-left: 67px;
 }
-.advantage-block ul li:hover i {
-  background-color: #00b998;
-  border: 3px solid #bee5de;
+.advantage-block header h2 small {
+  margin-top: 10px;
+  display: block;
 }
 .advantage-divider {
   height: 1px;
